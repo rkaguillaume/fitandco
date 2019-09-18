@@ -14,7 +14,12 @@
  *= require_self
  */
 
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
 @import "bootstrap/scss/bootstrap";
+@import "pages/index";
+@import "components/index";
 
 .wrapper {
     display: flex;
@@ -63,20 +68,18 @@ a[data-toggle="collapse"] {
     }
 }
 
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Open Sans", sans-serif;
     background: #fafafa;
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #999;
+    color: rgba(0, 0, 0, 0.9);
 }
 
 a, a:hover, a:focus {
@@ -86,43 +89,72 @@ a, a:hover, a:focus {
 }
 
 #sidebar {
-    /* don't forget to add all the previously mentioned styles here too */
-    background: #7386D5;
-    color: #fff;
+    background: #ffffff;
     transition: all 0.3s;
+    box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15) !important;
+    z-index: 120;
 }
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #6d7fcc;
+    h3 {
+      color: #5e72e4;
+      font-weight: 700;
+      text-align: center;
+    }
 }
 
-#sidebar ul.components {
-    padding: 20px 0;
-    border-bottom: 1px solid #47748b;
-}
-
-#sidebar ul p {
-    color: #fff;
-    padding: 10px;
+#sidebar hr {
+  margin: 20px 20px;
+  color: rgba(0, 0, 0, 0.1);
 }
 
 #sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
+    padding: 10px 25px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.9rem;
     display: block;
+    i {
+      padding-right: 15px;
+    }
 }
 #sidebar ul li a:hover {
-    color: #7386D5;
-    background: #fff;
+    color: rgba(0, 0, 0, 0.9);
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #fff;
-    background: #6d7fcc;
+  color: rgba(0, 0, 0, 0.9);
+  border-left: 2px solid #5e72e4;
 }
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
     background: #6d7fcc;
+}
+
+#sidebar .documentation {
+  padding: 10px 25px;
+  ul {
+    padding-left: 0;
+    list-style: none;
+    padding-top: 20px;
+    li {
+      color: rgba(0, 0, 0, 0.5);
+      font-size: 14px;
+      line-height: 39px;
+    }
+    i {
+      padding-right: 20px;
+    }
+  }
+}
+
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap";
+
+.text-info {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: #8898aa !important;
+  font-weight: 600;
 }

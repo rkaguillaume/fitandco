@@ -3,23 +3,36 @@
       <h3>Fit & Co</h3>
   </div>
 
-  <ul class="list-unstyled components">
-      <p>Bonjour <%= current_user.email %></p>
-
-      <li>
-          <a href="#">Page d'accueil</a>
+  <ul class="list-unstyled">
+      <li class="<%= active_link(dashboard_path) %>">
+        <%= link_to dashboard_path do %>
+          <i class="fas fa-tachometer-alt" style="color: #5e72e4"></i> Dashboard
+        <% end %>
       </li>
       <li>
-        <a href="#">Planning</a>
+        <a href="#"><i class="far fa-calendar-alt" style="color: #fb6340"></i> Planning</a>
       </li>
       <li>
-          <a href="#">Mes cours</a>
+          <a href="#"><i class="fas fa-indent" style="color: #ffd600"></i> Mes cours</a>
       </li>
       <li>
-          <a href="#">Mes coachs</a>
+          <a href="#"><i class="fas fa-user-plus" style="color: #f5365c"></i> Mes coachs</a>
       </li>
-      <li>
-          <a href="#">Contact</a>
+      <li class="<%= active_link(edit_user_registration_path) %>">
+        <%= link_to edit_user_registration_path do %>
+          <i class="fas fa-map-marker-alt" style="color: #10c5e5"></i> Contact
+        <% end %>
       </li>
   </ul>
+
+  <hr>
+
+  <div class="documentation">
+    <span class="text-muted">DOCUMENTATION</span>
+    <ul>
+      <li><i class="fas fa-rocket"></i> Gérez votre site</li>
+      <li><i class="fas fa-life-ring"></i> Besoin d'aide ?</li>
+    </ul>
+  </div>
 </nav>
+
