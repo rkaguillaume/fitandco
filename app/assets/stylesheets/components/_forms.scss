@@ -1,0 +1,25 @@
+.form-control-label {
+  color: #525f7f;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.form-control-alternative {
+  box-shadow: 0 1px 3px rgba(50, 50, 93, 0.15), 0 1px 0 rgba(0, 0, 0, 0.02);
+  border: 0;
+  transition: box-shadow .15s ease;
+}
+
+.form-control {
+  font-size: 15px;
+  color: #8898aa;
+  height: calc(2.75rem + 2px);
+}
+
+.form-inputs span {
+  padding-bottom: 20px;
+}
+
+abbr[title="required"] {
+  display: none;
+}
