@@ -1,0 +1,11 @@
+.dashboard-content {
+  width: 100%;
+  background-color: #f3f6fb;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .dashboard-content {
+    margin-left: 250px;
+  }
+}

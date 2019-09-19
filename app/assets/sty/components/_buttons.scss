@@ -1,0 +1,29 @@
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 0.375rem;
+  font-weight: 600;
+}
+
+.btn-primary {
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.btn-default {
+  color: #fff;
+  background-color: $dark-blue;
+  border-color: $dark-blue;
+}
+
+.btn-info {
+  color: #fff;
+}
+
+.btn-header {
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 0.375rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  font-size: 0.875rem;
+}

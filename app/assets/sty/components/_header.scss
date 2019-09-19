@@ -1,0 +1,18 @@
+.header-dashboard {
+  height: 500px;
+  background: linear-gradient(87deg, #172b4d 0, #1a174d 100%) !important;
+  .title-header {
+    font-size: 2.75rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+}
+
+.mt-n7 {
+  margin-top: -5rem !important;
+}
