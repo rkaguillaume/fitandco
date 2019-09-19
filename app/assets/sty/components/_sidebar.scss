@@ -1,26 +1,3 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
-@import "font-awesome-sprockets";
-@import "font-awesome";
-
-@import "bootstrap/scss/bootstrap";
-@import "pages/index";
-@import "components/index";
-
 .wrapper {
     display: flex;
     width: 100%;
@@ -93,6 +70,7 @@ a, a:hover, a:focus {
     transition: all 0.3s;
     box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15) !important;
     z-index: 120;
+    position: fixed;
 }
 
 #sidebar .sidebar-header {
@@ -147,14 +125,4 @@ ul ul a {
       padding-right: 20px;
     }
   }
-}
-
-@import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap";
-
-.text-info {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: .04em;
-  color: #8898aa !important;
-  font-weight: 600;
 }

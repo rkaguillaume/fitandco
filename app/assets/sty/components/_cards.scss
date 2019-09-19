@@ -1,0 +1,93 @@
+.card {
+  border-radius: 0.375rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+  border-radius: 0.375rem !important;
+  background-color: transparent;
+  .card-header-title {
+    font-weight: 600;
+    line-height: 1.5;
+    color: #32325d;
+  }
+}
+
+.shadow {
+  box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15) !important;
+}
+
+.card-profile-image {
+  position: relative;
+  img {
+    max-width: 180px;
+    border-radius: 0.375rem;
+    transform: translate(-50%, -30%);
+    position: absolute;
+    left: 50%;
+    transition: all 0.15s ease;
+  }
+}
+
+.card-profile-stats {
+  padding: 1rem 0;
+  div {
+    text-align: center;
+    margin-right: 1rem;
+    padding: .875rem;
+  }
+  .heading {
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: block;
+    color: #525f7f;
+  }
+  .description {
+    font-size: .875rem;
+    color: #adb5bd;
+  }
+}
+
+.card-user-info {
+  .title-contact {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #32325d;
+  }
+  .user-fullname {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #32325d;
+  }
+  .user-address {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #32325d;
+    margin-bottom: 35px;
+  }
+  .user-contact {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #525f7f;
+  }
+}
+
+@media (min-width: 768px) {
+  .pb-md-4, .py-md-4 {
+    padding-bottom: 1.5rem !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .pt-md-4, .py-md-4 {
+    padding-top: 1.5rem !important;
+  }
+}
+
+.pt-8, .py-8 {
+  padding-top: 8rem;
+}

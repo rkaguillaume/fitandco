@@ -1,138 +1,195 @@
 <div class="wrapper">
+  <!-- Sidebar -->
+  <%= render "dashboards/sidebar" %>
 
-    <!-- Sidebar -->
-    <%= render "dashboards/sidebar" %>
+  <!-- Page Content -->
+  <div id="content" class="dashboard-content">
 
-    <!-- Page Content -->
-    <div id="content" class="dashboard-content">
+    <!-- Header -->
+    <div class="header-dashboard">
       <div>
-
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-          <button type="button" id="sidebarCollapse" class="btn btn-info">
-            <i class="fas fa-align-left"></i>
-            <span>Toggle Sidebar</span>
-          </button>
-        </div>
-      </nav>
-
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="btn btn-info btn-header">
+              <i class="fas fa-align-left"></i>
+            </button>
+          </div>
+        </nav>
       </div>
-
-<div class="container">
-
-<div class="row">
-  <div class="col-md-8">
-    <div class="card bg-secondary shadow">
-
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: "card-body" }) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <span class="text-info">Informations Utilisateur</span>
-    <div class="pl-lg-4 mt-4 mb-4">
-      <%= f.input :email, required: true, autofocus: true, input_html: { autocomplete: "email", class: "form-control-alternative" } %>
-
-      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-        <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-      <% end %>
+      <div class="container mt-5 pl-lg-5">
         <div class="row">
-        <div class="col-md-6">
-          <%= f.input :first_name,
-                      label: "Prénom",
-                      required: true,
-                      autofocus: true,
-                      input_html: { autocomplete: "Prénom", class: "form-control-alternative" }%>
-        </div>
-        <div class="col-md-6">
-          <%= f.input :last_name,
-                  label: "Nom",
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "Nom", class: "form-control-alternative" }%>
+          <div class="col-lg-7 col-md-10">
+            <h1 class="title-header text-white">Bonjour <%= current_user.first_name %></h1>
+            <p class="text-white mt-0 mb-5">Bienvenue sur votre page contact. Vous pouvez changer vos informations personnelles ou encore éditer les moyens de contacts de votre site ici</p>
+            <a href="#!" class="btn btn-info btn-header">Edit profile</a>
+          </div>
         </div>
       </div>
     </div>
-    <hr>
-    <span class="text-info">Informations contact</span>
-    <div class="pl-lg-4 mt-4 mb-4">
-      <%= f.input :address,
-                  label: "Adresse de l'établissement",
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "Addresse", class: "form-control-alternative" }%>
+    <!-- Page Content -->
+    <div class="container mt-n7">
       <div class="row">
-        <div class="col-md-6">
-          <%= f.input :phone,
-                  label: "Téléphone",
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "Phone", class: "form-control-alternative" }%>
+        <div class="col-xl-4 order-xl-2">
+          <div class="card shadow mb-3">
+            <div class="card-profile-image">
+              <a href="#"><%= image_tag("picto-user.svg") %></a>
+            </div>
+            <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4" style="z-index: 1;">
+              <div class="d-flex justify-content-between">
+                <a href="#" class="btn btn-sm btn-info mr-4">Connect</a>
+                <a href="#" class="btn btn-sm btn-default float-right">Message</a>
+              </div>
+            </div>
+            <div class="card-body pt-0 pt-md-4">
+              <div class="row">
+                <div class="col">
+                  <div class="card-profile-stats d-flex justify-content-center mt-md-5">
+                    <div>
+                      <span class="heading">12</span>
+                      <span class="description">cours</span>
+                    </div>
+                    <div>
+                      <span class="heading">12</span>
+                      <span class="description">coachs</span>
+                    </div>
+                    <div>
+                      <span class="heading">2</span>
+                      <span class="description">planning</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center card-user-info">
+                <div class="user-fullname">
+                  <%= current_user.first_name %> <%= current_user.last_name %>
+                </div>
+                <div class="user-address">
+                  <%= current_user.address %>
+                </div>
+                <div class="title-contact">Moyen de contact</div>
+                <div class="user-contact">
+                  <%= current_user.phone %>
+                </div>
+                <div class="user-contact">
+                  <%= current_user.email %>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-md-6">
-          <%= f.input :email,
-                      label: "E-mail de contact",
-                      required: true,
-                      autofocus: true,
-                      input_html: { autocomplete: "email", class: "form-control-alternative" } %>
+
+        <div class="col-xl-8 order-xl-1">
+          <div class="card bg-secondary shadow">
+            <div class="card-header bg-white border-0">
+              <div class="row align-items-center">
+                <div class="col-8 card-header-title">
+                  Mon compte
+                </div>
+                <div class="col-4 text-right">
+                  <a href="#" class="btn btn-sm btn-primary">Mes paramètres</a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+              <%= f.error_notification %>
+              <div class="form-inputs">
+                <span class="label-info">Informations Utilisateur</span>
+                <div class="pl-lg-4 mt-4 mb-4">
+                  <%= f.input :email, required: true, autofocus: true, input_html: { autocomplete: "email", class: "form-control-alternative" } %>
+
+                  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                    <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+                  <% end %>
+                    <div class="row">
+                    <div class="col-md-6">
+                      <%= f.input :first_name,
+                                  label: "Prénom",
+                                  required: true,
+                                  autofocus: true,
+                                  input_html: { autocomplete: "Prénom", class: "form-control-alternative" }%>
+                    </div>
+                    <div class="col-md-6">
+                      <%= f.input :last_name,
+                              label: "Nom",
+                              required: true,
+                              autofocus: true,
+                              input_html: { autocomplete: "Nom", class: "form-control-alternative" }%>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <span class="label-info">Informations contact</span>
+                <div class="pl-lg-4 mt-4 mb-4">
+                  <%= f.input :address,
+                              label: "Adresse de l'établissement",
+                              required: true,
+                              autofocus: true,
+                              input_html: { autocomplete: "Addresse", class: "form-control-alternative" }%>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <%= f.input :phone,
+                              label: "Téléphone",
+                              required: true,
+                              autofocus: true,
+                              input_html: { autocomplete: "Phone", class: "form-control-alternative" }%>
+                    </div>
+                    <div class="col-md-6">
+                      <%= f.input :email,
+                                  label: "E-mail de contact",
+                                  required: true,
+                                  autofocus: true,
+                                  input_html: { autocomplete: "email", class: "form-control-alternative" } %>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <span class="label-info">Changer de mot de passe</span>
+                <div class="pl-lg-4 mt-4 mb-4">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <%= f.input :password,
+                              label: "Nouveau mot de passe",
+                              hint: "Laisser vide si aucun changement",
+                              required: false,
+                              input_html: { autocomplete: "Nouveau mot de passe", class: "form-control-alternative" } %>
+                    </div>
+                    <div class="col-md-6">
+                      <%= f.input :password_confirmation,
+                              label: "Confirmation du nouveau mot de passe",
+                              required: false,
+                              input_html: { autocomplete: "Confirmation mot de passe", class: "form-control-alternative" } %>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <span class="label-info">Validation des changements</span>
+                <div class="pl-lg-4 mt-4 mb-4">
+                <%= f.input :current_password,
+                            label: "Pour valider entrez votre mot de passe actuel",
+                            hint: "Pour valider vos changements entrez votre mot de passe actuel",
+                            required: true,
+                            input_html: { autocomplete: "Mot de passe actuel", class: "form-control-alternative" } %>
+                </div>
+              </div>
+
+              <div class="form-actions text-center mt-5 mb-4">
+                <%= f.button :submit, "Mettre à jour", class: "btn-primary" %>
+              </div>
+            <% end %>
+              <!-- <h3>Cancel my account</h3>
+
+              <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+              <%= link_to "Back", :back %> -->
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <hr>
-    <span class="text-info">Changer de mot de passe</span>
-    <div class="pl-lg-4 mt-4 mb-4">
-      <div class="row">
-        <div class="col-md-6">
-          <%= f.input :password,
-                  label: "Nouveau mot de passe",
-                  hint: "Laisser vide si aucun changement",
-                  required: false,
-                  input_html: { autocomplete: "Nouveau mot de passe", class: "form-control-alternative" } %>
-        </div>
-        <div class="col-md-6">
-          <%= f.input :password_confirmation,
-                  label: "Confirmation du nouveau mot de passe",
-                  required: false,
-                  input_html: { autocomplete: "Confirmation mot de passe", class: "form-control-alternative" } %>
-        </div>
-      </div>
-    </div>
-    <hr>
-    <span class="text-info">Validation des changements</span>
-    <div class="pl-lg-4 mt-4 mb-4">
-    <%= f.input :current_password,
-                label: "Pour valider entrez votre mot de passe actuel",
-                hint: "Pour valider vos changements entrez votre mot de passe actuel",
-                required: true,
-                input_html: { autocomplete: "Mot de passe actuel", class: "form-control-alternative" } %>
-    </div>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Update", class: "btn-primary" %>
-  </div>
-<% end %>
-
-<!-- <h3>Cancel my account</h3>
-
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %> -->
-
-    </div>
-
-  </div>
-    <div class="col-md-4">
-
   </div>
 </div>
-</div>
 
-
-
-    </div>
-
-</div>
 
 <script>
   $(document).ready(function () {
