@@ -12,8 +12,10 @@
       <li>
         <a href="#"><i class="far fa-calendar-alt" style="color: #fb6340"></i> Planning</a>
       </li>
-      <li>
-          <a href="#"><i class="fas fa-indent" style="color: #ffd600"></i> Mes cours</a>
+      <li class="<%= active_link(courses_path) %>">
+        <%= link_to courses_path do %>
+          <i class="fas fa-indent" style="color: #ffd600"></i> Mes cours
+        <% end %>
       </li>
       <li>
           <a href="#"><i class="fas fa-user-plus" style="color: #f5365c"></i> Mes coachs</a>

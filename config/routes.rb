@@ -5,6 +5,6 @@ Rails.application.routes.draw do
       }
   root to: 'pages#home'
 
-
   get 'dashboard', to: 'dashboards#index'
+  resources :courses, only: [:index, :create, :destroy]
 end

@@ -10,6 +10,15 @@
   transition: box-shadow .15s ease;
 }
 
+.form-control-text {
+    padding: 10px;
+    width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.15) 0px 1px 3px, rgba(0, 0, 0, 0.02) 0px 1px 0px;
+    border: 0px;
+    font-size: 15px;
+    color: rgb(136, 152, 170)
+}
+
 .form-control {
   font-size: 15px;
   color: #8898aa;
