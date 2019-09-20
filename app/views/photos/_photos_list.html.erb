@@ -1,0 +1,14 @@
+<% if @photos.count > 0 %>
+  <div class="row">
+    <% @photos.each do |photo| %>
+      <div class="col-md-3">
+        <div style="background:url('<%=  photo.image.url() %>')" class="photo-background">
+        </div>
+
+        <%= link_to course_photo_path(photo.course_id, photo), remote: true, method: :delete, data: {confirm: "Êtes-vous sûr ?"} do %>
+          <span class="btn btn-sm btn-primary mt-2 mb-3">Supprimer</span>
+        <% end %>
+        </div>
+      <% end %>
+    </div>
+<% end %>

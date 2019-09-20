@@ -30,6 +30,12 @@ class CoursesController < ApplicationController
     end
   end
 
+  def photo_upload
+    @course = Course.find(params[:id])
+    @photos = @course.photos
+    @courses = current_user.courses
+  end
+
   private
 
   def courses_params

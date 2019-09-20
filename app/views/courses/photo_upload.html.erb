@@ -1,0 +1,96 @@
+<div class="wrapper">
+  <!-- Sidebar -->
+  <%= render "dashboards/sidebar" %>
+
+  <!-- Page Content -->
+  <div id="content" class="dashboard-content">
+    <div class="header-dashboard">
+      <div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="btn btn-info btn-header">
+              <i class="fas fa-align-left"></i>
+            </button>
+          </div>
+        </nav>
+      </div>
+      <div class="container mt-5 pl-lg-5">
+        <div class="row">
+          <div class="col-lg-7 col-md-10">
+            <h1 class="title-header text-white">Ajouter des photos (<%= @course.title %>)</h1>
+            <p class="text-white mt-0 mb-5">Sur cette page vous pouvez ajouter ou supprimer les photos du cours <%= @course.title %> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-n7">
+      <div class="card bg-secondary">
+        <div class="card-header bg-white border-0">
+          <div class="card-header-title">
+            <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i> Selectionner des photos
+          </div>
+        </div>
+        <div class="card-body">
+          <%= form_for @course, url: course_photos_path(@course), method: 'post', html: {multipart: true} do |f| %>
+            <div>
+              <div class="file-drop-area">
+                <span class="fake-btn">Select. fichier</span>
+                <span class="file-msg">ou glisser et déposer vos photos</span>
+                <%= file_field_tag "images[]", type: :file, multiple: true, class: "file-input" %>
+                <%= f.submit "Ajouter les photos sélectionnées", class: "btn btn-info btn-header ", style: "z-index: 3" %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="card bg-secondary">
+        <div class="card-header rounded-top">
+          <div class="card-header-title">
+            Mes photos
+          </div>
+        </div>
+        <div class="card-body">
+
+            <div id="photos">
+              <%= render 'photos/photos_list' %>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var $fileInput = $('.file-input');
+  var $droparea = $('.file-drop-area');
+
+  // highlight drag area
+  $fileInput.on('dragenter focus click', function() {
+    $droparea.addClass('is-active');
+  });
+
+  // back to normal state
+  $fileInput.on('dragleave blur drop', function() {
+    $droparea.removeClass('is-active');
+  });
+
+  // change inner text
+  $fileInput.on('change', function() {
+    var filesCount = $(this)[0].files.length;
+    var $textContainer = $(this).prev();
+
+    if (filesCount === 1) {
+      // if single file is selected, show file name
+      var fileName = $(this).val().split('\\').pop();
+      $textContainer.text(fileName);
+    } else {
+      // otherwise show number of files
+      $textContainer.text(filesCount + ' fichiers sélectionnées');
+    }
+  });
+</script>

@@ -45,8 +45,7 @@
                     <th scope="col">Sous-titre</th>
                     <th scope="col">Description</th>
                     <th scope="col">Photos</th>
-                    <th scope="col">Action</th>
-                    <th scope="col"></th>
+                    <th scope="col" class="text-center">Supprimer</th>
                   </tr>
                 </thead>
                 <tbody id="courses">
@@ -64,6 +63,7 @@
 
 <!-- Modal New Course-->
 <%= render partial: 'form', locals: { course: @course } %>
+
 
 <script>
   $(document).ready(function () {
