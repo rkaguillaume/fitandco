@@ -1,0 +1,33 @@
+.table thead th {
+  min-width: 150px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.table th {
+  padding: 1.5rem;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+.table .thead-light th {
+  color: #8898aa;
+}
+
+.th-header {
+  font-size: 14px;
+  color: #525f7f;
+  font-weight: 600;
+}
+
+.th-text {
+  font-size: 14px;
+  color: #525f7f;
+  font-weight: normal;
+}

@@ -1,0 +1,76 @@
+<div class="wrapper">
+  <!-- Sidebar -->
+  <%= render "dashboards/sidebar" %>
+
+  <!-- Page Content -->
+  <div id="content" class="dashboard-content">
+
+    <!-- Header -->
+    <div class="header-dashboard">
+      <div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="btn btn-info btn-header">
+              <i class="fas fa-align-left"></i>
+            </button>
+          </div>
+        </nav>
+      </div>
+      <div class="container mt-5 pl-lg-5">
+        <div class="row">
+          <div class="col-lg-7 col-md-10">
+            <h1 class="title-header text-white">Ajouter des cours</h1>
+            <p class="text-white mt-0 mb-5">Bienvenue sur votre page d'ajout de cours. Vous pouvez ajouter ou éditer des informations de vos cours ici</p>
+            <button type="button" class="btn btn-info btn-header" data-toggle="modal" data-target="#exampleModalCenter">
+              Ajouter un cours
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Courses table -->
+    <div class="container mt-n7">
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header border-0">
+              <div class="card-header-title">Tous mes cours</div>
+            </div>
+            <div class="table-responsive">
+              <table class="table aligns-items-center table-flush">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">Titre</th>
+                    <th scope="col">Sous-titre</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Photos</th>
+                    <th scope="col">Action</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody id="courses">
+                  <%= render 'courses_list' %>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal New Course-->
+<%= render partial: 'form', locals: { course: @course } %>
+
+<script>
+  $(document).ready(function () {
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+
+});
+</script>
