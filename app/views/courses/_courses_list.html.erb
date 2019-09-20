@@ -5,18 +5,15 @@
     <td><div class="th-text"><%= truncate(course.description, length: 35) %></div></td>
     <td>
       <div class="th-text">
-        <a href="#" class="avatar avatar-sm avatar-group"><%= image_tag("picto-user.svg") %></a>
-        <a href="#" class="avatar avatar-sm avatar-group"><%= image_tag("picto-user.svg") %></a>
-        <a href="#" class="avatar avatar-sm avatar-group"><%= image_tag("picto-user.svg") %></a>
+        <%= link_to "Ajouter des photos", photo_upload_course_path(course), class: "btn btn-sm btn-primary" %>
       </div>
     </td>
-    <td>
+    <td class="text-center">
       <div><%= link_to course_path(course), remote: true, method: :delete, data: {confirm: "Êtes-vous sûr ?"} do %>
         <i class="far fa-trash-alt" aria-hidden="true"></i>
     <% end %></div>
     </td>
-    <td class="text-rigth">
-      <div><i class="fas fa-ellipsis-v"></i></div>
-    </td>
   </tr>
+
 <% end %>
+
