@@ -1,0 +1,69 @@
+<div class="modal fade" id="formCoach" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content modal-form bg-secondary">
+      <div class="modal-header modal-form-header bg-white">
+        <h5 class="modal-title modal-header-title" id="exampleModalCenterTitle">Ajouter un coach</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <%= simple_form_for [@coach], url: coachs_path, html: {multipart: true}  do |f| %>
+      <span class="label-info">Informations sur le coach</span>
+      <div class="pl-lg-4 mt-4 mb-4">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <%= f.input :name, placeholder: "Nom du coach", input_html: { autocomplete: "Nom du coach", class: "form-control-alternative" } %>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <%= f.input :specialisation, placeholder: "Spécialisation", input_html: { autocomplete: "Spécialisation", class: "form-control-alternative" } %>
+          </div>
+        </div>
+      </div>
+      <span class="label-info">Ajouter une photo</span>
+      <div class="pl-lg-4 mt-4 mb-4">
+        <div class="file-drop-area">
+          <span class="fake-btn">Select. fichier</span>
+          <span class="file-msg">ou glisser et déposer vos photos</span>
+          <%= f.input :picture, type: :file, multiple: true, wrapper: false, input_html: { class: "file-input" }, label: false %>
+        </div>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
+        <%= f.submit "Ajouter le coach", class: "btn btn-success" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<script>
+  var $fileInput = $('.file-input');
+  var $droparea = $('.file-drop-area');
+
+  // highlight drag area
+  $fileInput.on('dragenter focus click', function() {
+    $droparea.addClass('is-active');
+  });
+
+  // back to normal state
+  $fileInput.on('dragleave blur drop', function() {
+    $droparea.removeClass('is-active');
+  });
+
+  // change inner text
+  $fileInput.on('change', function() {
+    var filesCount = $(this)[0].files.length;
+    var $textContainer = $(this).prev();
+
+    if (filesCount === 1) {
+      // if single file is selected, show file name
+      var fileName = $(this).val().split('\\').pop();
+      $textContainer.text(fileName);
+    } else {
+      // otherwise show number of files
+      $textContainer.text(filesCount + ' fichiers sélectionnées');
+    }
+  });
+</script>

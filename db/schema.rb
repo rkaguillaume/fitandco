@@ -10,10 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_20_084140) do
+ActiveRecord::Schema.define(version: 2019_09_23_084512) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "coaches", force: :cascade do |t|
+    t.string "name"
+    t.string "specialisation"
+    t.string "picture"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_coaches_on_user_id"
+  end
+
+  create_table "coachs", force: :cascade do |t|
+    t.string "name"
+    t.string "specialisation"
+    t.string "picture"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_coachs_on_user_id"
+  end
 
   create_table "courses", force: :cascade do |t|
     t.string "title"
@@ -49,6 +67,8 @@ ActiveRecord::Schema.define(version: 2019_09_20_084140) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "coaches", "users"
+  add_foreign_key "coachs", "users"
   add_foreign_key "courses", "users"
   add_foreign_key "photos", "courses"
 end
