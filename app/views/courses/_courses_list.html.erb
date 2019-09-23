@@ -8,6 +8,11 @@
         <%= link_to "Ajouter des photos", photo_upload_course_path(course), class: "btn btn-sm btn-primary" %>
       </div>
     </td>
+    <td>
+      <div class="th-text text-center">
+        <%= link_to "Edit", edit_course_path(course), class: "btn btn-sm btn-primary" %>
+      </div>
+    </td>
     <td class="text-center">
       <div><%= link_to course_path(course), remote: true, method: :delete, data: {confirm: "Êtes-vous sûr ?"} do %>
         <i class="far fa-trash-alt" aria-hidden="true"></i>
