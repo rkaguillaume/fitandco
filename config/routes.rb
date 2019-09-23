@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'dashboard', to: 'dashboards#index'
 
+
+  resources :coachs, only: [:index, :create, :edit, :update, :destroy]
   resources :courses, only: [:index, :create, :edit, :update, :destroy] do
     member do
       get 'photo_upload'

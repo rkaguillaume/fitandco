@@ -1,0 +1,22 @@
+<% @coachs.each do |coach| %>
+  <tr>
+    <th scope="row"><div class="align-items-center th-header"><%= coach.name %></div></th>
+    <td><div class="th-text"><%= coach.specialisation %></div></td>
+    <td>
+      <div class="th-text text-center">
+        <%= cl_image_tag coach.picture, :width=>40, :height=>40, :gravity=>"face", :radius=>"max", :crop=>"thumb", class: "avatar-circle" %>
+      </div>
+    </td>
+    <td>
+      <div class="th-text text-center">
+        <%= link_to "Edit", edit_coach_path(coach), class: "btn btn-sm btn-primary" %>
+      </div>
+    </td>
+    <td class="text-center">
+      <div><%= link_to coach_path(coach), remote: true, method: :delete, data: {confirm: "Êtes-vous sûr ?"} do %>
+        <i class="far fa-trash-alt" aria-hidden="true"></i>
+    <% end %></div>
+    </td>
+  </tr>
+<% end %>
+

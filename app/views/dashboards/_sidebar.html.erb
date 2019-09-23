@@ -17,8 +17,10 @@
           <i class="fas fa-indent" style="color: #ffd600"></i> Mes cours
         <% end %>
       </li>
-      <li>
-          <a href="#"><i class="fas fa-user-plus" style="color: #f5365c"></i> Mes coachs</a>
+      <li class="<%= active_link(coachs_path) %>">
+        <%= link_to coachs_path do %>
+          <i class="fas fa-user-plus" style="color: #f5365c"></i> Mes coachs
+        <% end %>
       </li>
       <li class="<%= active_link(edit_user_registration_path) %>">
         <%= link_to edit_user_registration_path do %>

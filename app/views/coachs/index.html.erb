@@ -19,10 +19,10 @@
       <div class="container mt-5 pl-lg-5">
         <div class="row">
           <div class="col-lg-7 col-md-10">
-            <h1 class="title-header text-white">Ajouter des cours</h1>
-            <p class="text-white mt-0 mb-5">Bienvenue sur votre page d'ajout de cours. Vous pouvez ajouter ou éditer des informations de vos cours ici</p>
-            <button type="button" class="btn btn-info btn-header" data-toggle="modal" data-target="#exampleModalCenter">
-              Ajouter un cours
+            <h1 class="title-header text-white">Ajouter des coachs</h1>
+            <p class="text-white mt-0 mb-5">Bienvenue sur votre page d'ajout de coachs. Vous pouvez ajouter ou éditer des informations de tous vos coachs ici</p>
+            <button type="button" class="btn btn-info btn-header" data-toggle="modal" data-target="#formCoach">
+              Ajouter un coach
             </button>
           </div>
         </div>
@@ -33,24 +33,23 @@
     <div class="container mt-n7">
       <div class="row">
         <div class="col">
-          <div class="card shadow mb-3">
+          <div class="card shadow mb-4">
             <div class="card-header border-0">
-              <div class="card-header-title">Tous mes cours</div>
+              <div class="card-header-title">Tous mes coachs</div>
             </div>
             <div class="table-responsive">
               <table class="table aligns-items-center table-flush">
                 <thead class="thead-light">
                   <tr>
-                    <th scope="col">Titre</th>
-                    <th scope="col">Sous-titre</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Photos</th>
-                    <th scope="col" class="text-center">Modifier</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Specialisation</th>
+                    <th scope="col" class="text-center">Photos</th>
+                    <th scope="col" class="text-center">Editer</th>
                     <th scope="col" class="text-center">Supprimer</th>
                   </tr>
                 </thead>
-                <tbody id="courses">
-                  <%= render 'courses_list' %>
+                <tbody id="coachs">
+                  <%= render 'coachs_list' %>
                 </tbody>
               </table>
             </div>
@@ -61,9 +60,9 @@
   </div>
 </div>
 
-<!-- Modal New Course-->
-<%= render partial: 'form', locals: { course: @course } %>
 
+<!-- Modal New Coach -->
+<%= render partial: 'form', locals: { coach: @coach } %>
 
 <script>
   $(document).ready(function () {

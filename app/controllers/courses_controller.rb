@@ -13,7 +13,7 @@ class CoursesController < ApplicationController
   def create
     @course = current_user.courses.build(courses_params)
     if @course.save
-      redirect_to courses_path, notice: "Le cour a été ajoutée"
+      redirect_to courses_path, notice: "Le cours a été ajoutée"
     else
       render :new, notice: "Quelque chose ne va pas"
     end
