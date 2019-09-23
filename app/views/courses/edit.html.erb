@@ -1,0 +1,67 @@
+<div class="wrapper">
+  <!-- Sidebar -->
+  <%= render "dashboards/sidebar" %>
+
+  <!-- Page Content -->
+  <div id="content" class="dashboard-content">
+
+    <!-- Header -->
+    <div class="header-dashboard">
+      <div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="btn btn-info btn-header">
+              <i class="fas fa-align-left"></i>
+            </button>
+          </div>
+        </nav>
+      </div>
+      <div class="container mt-5 pl-lg-5">
+        <div class="row">
+          <div class="col-lg-7 col-md-10">
+            <h1 class="title-header text-white">Editer le cours <%= @course.title %></h1>
+            <p class="text-white mt-0 mb-5">Bienvenue sur votre page d'édition. Ici, vous pourrez mettre à jour les informations du cours <%= @course.title %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-n7">
+      <div class="row">
+        <div class="col-xl-8 mb-3">
+          <%= render partial: 'form_edit', locals: { course: @course } %>
+        </div>
+        <div class="col-xl-4">
+          <div class="card shadow bg-secondary mb-3">
+            <div class="card-header bg-white border-0">
+              <div class="row align-items-center">
+                <div class="col-8 card-header-title">
+                  Vos photos
+                </div>
+                <div class="col-4 card-header-title">
+                  <%= @course.photos.size %>
+                </div>
+              </div>
+
+            </div>
+            <div class="card-body">
+              <%= link_to "Ajouter/modifier les photos", photo_upload_course_path(@course), class: "btn btn-sm btn-primary" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+  $(document).ready(function () {
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+
+});
+</script>

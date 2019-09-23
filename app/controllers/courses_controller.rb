@@ -19,6 +19,21 @@ class CoursesController < ApplicationController
     end
   end
 
+  def edit
+    @course = Course.find(params[:id])
+  end
+
+  def update
+    course = Course.find(params[:id])
+
+    if course.update(courses_params)
+      flash[:notice] = "modification enregistrée"
+    else
+      flash[:notice] = "Problème"
+    end
+    redirect_back(fallback_location: request.referer)
+  end
+
   def destroy
     @course = Course.find(params[:id])
     @course.destroy
