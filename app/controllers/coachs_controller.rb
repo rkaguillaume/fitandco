@@ -25,7 +25,9 @@ class CoachsController < ApplicationController
 
   def update
     coach = Coach.find(params[:id])
-    coach.picture.file.delete
+    if coach_params[:picture].present?
+      coach.picture.file.delete
+    end
 
     if coach.update(coach_params)
       flash[:notice] = "modification enregistrée"

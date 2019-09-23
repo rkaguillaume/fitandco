@@ -1,0 +1,74 @@
+<div class="wrapper">
+  <!-- Sidebar -->
+  <%= render "dashboards/sidebar" %>
+
+  <!-- Page Content -->
+  <div id="content" class="dashboard-content">
+
+    <!-- Header -->
+    <div class="header-dashboard">
+      <div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="btn btn-info btn-header">
+              <i class="fas fa-align-left"></i>
+            </button>
+          </div>
+        </nav>
+      </div>
+      <div class="container mt-5 pl-lg-5">
+        <div class="row">
+          <div class="col-lg-7 col-md-10">
+            <h1 class="title-header text-white">Ajouter vos plannings</h1>
+            <p class="text-white mt-0 mb-5">Bienvenue sur votre page d'ajout de planning. Vous pouvez ajouter ou éditer les plannings horaires de l'établissement (Format IMG/PNG)</p>
+            <button type="button" class="btn btn-info btn-header" data-toggle="modal" data-target="#formPlanning">
+              Ajouter un planning
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Courses table -->
+    <div class="container mt-n7">
+      <div class="row">
+        <div class="col">
+          <div class="card shadow mb-4">
+            <div class="card-header border-0">
+              <div class="card-header-title">Tous mes plannings</div>
+            </div>
+            <div class="table-responsive">
+              <table class="table aligns-items-center table-flush">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">Nom du planning</th>
+                    <th scope="col" class="text-center">Photo</th>
+                    <th scope="col" class="text-center">Editer</th>
+                    <th scope="col" class="text-center">Supprimer</th>
+                  </tr>
+                </thead>
+                <tbody id="plannings">
+                  <%= render 'plannings_list' %>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal New Coach -->
+<%= render partial: 'form', locals: { planning: @planning } %>
+
+<script>
+  $(document).ready(function () {
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+
+});
+</script>

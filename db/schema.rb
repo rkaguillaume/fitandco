@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_23_084512) do
+ActiveRecord::Schema.define(version: 2019_09_23_122147) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,15 @@ ActiveRecord::Schema.define(version: 2019_09_23_084512) do
     t.index ["course_id"], name: "index_photos_on_course_id"
   end
 
+  create_table "plannings", force: :cascade do |t|
+    t.string "title"
+    t.string "plan_img"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_plannings_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -71,4 +80,5 @@ ActiveRecord::Schema.define(version: 2019_09_23_084512) do
   add_foreign_key "coachs", "users"
   add_foreign_key "courses", "users"
   add_foreign_key "photos", "courses"
+  add_foreign_key "plannings", "users"
 end
