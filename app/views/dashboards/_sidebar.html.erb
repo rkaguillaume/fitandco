@@ -9,8 +9,10 @@
           <i class="fas fa-tachometer-alt" style="color: #5e72e4"></i> Dashboard
         <% end %>
       </li>
-      <li>
-        <a href="#"><i class="far fa-calendar-alt" style="color: #fb6340"></i> Planning</a>
+      <li class="<%= active_link(plannings_path) %>">
+        <%= link_to plannings_path do %>
+          <i class="far fa-calendar-alt" style="color: #fb6340"></i> Planning
+        <% end %>
       </li>
       <li class="<%= active_link(courses_path) %>">
         <%= link_to courses_path do %>
