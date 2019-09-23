@@ -13,7 +13,7 @@ class PlanningsController < ApplicationController
   def create
     @planning = current_user.plannings.build(planning_params)
     if @planning.save
-      redirect_to coachs_path, notice: "Un nouveau coach a été ajouté"
+      redirect_to plannings_path, notice: "Un nouveau planning a été ajouté"
     else
       render :new, notice: "Quelque chose ne va pas"
     end
