@@ -1,0 +1,16 @@
+.icon-shape {
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  position: relative;
+  i {
+    position: absolute;
+    top: 13px;
+    left: 15px;
+    font-size: 18px;
+    color: white;
+  }
+  .second-i {
+    left: 11px !important;
+  }
+}

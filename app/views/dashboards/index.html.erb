@@ -1,22 +1,145 @@
 <div class="wrapper">
+  <!-- Sidebar -->
+  <%= render "dashboards/sidebar" %>
 
-    <!-- Sidebar -->
-    <%= render "sidebar" %>
+  <!-- Page Content -->
+  <div id="content" class="dashboard-content">
 
-    <!-- Page Content -->
-    <div id="content" class="dashboard-content">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Header -->
+    <div class="header-dashboard">
+      <div>
+        <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container-fluid">
-
-              <button type="button" id="sidebarCollapse" class="btn btn-info">
-                  <i class="fas fa-align-left"></i>
-                  <span>Toggle Sidebar</span>
-              </button>
-
+            <button type="button" id="sidebarCollapse" class="btn btn-info btn-header">
+              <i class="fas fa-align-left"></i>
+            </button>
           </div>
-      </nav>
+        </nav>
+      </div>
+      <div class="container mt-5 pl-lg-5">
+        <div class="row">
+          <div class="col-lg-7 col-md-10">
+            <h1 class="title-header text-white">Bonjour <%= current_user.first_name %></h1>
+            <p class="text-white mt-0 mb-5">Bienvenue sur votre tableau de bord. D'ici, vous pouvez administrez les différentes parties de votre site. Ajouter vos planning, cours, coachs et mettre à jours vos moyens de contact</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0" >
+                      Coachs
+                    </h5>
+                    <span class="number font-weight-bold mb-0">
+                      <%= @coachs %>
+                    </span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon-shape bg-red">
+                      <i class="fas fa-running"></i>
+                    </div>
+                  </div>
+                </div>
+                <p class="mt-2 mb-0 text-muted text-sm">
+                  <%= link_to coachs_path, class: "text-success mr-2" do %>
+                    <i class="fa fa-arrow-up"></i> ajouter</span>
+                  <% end %>
+                  <span class="text-nowrap">un coach</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0" >
+                      Cours
+                    </h5>
+                    <span class="number font-weight-bold mb-0">
+                      <%= @courses %>
+                    </span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon-shape bg-yellow">
+                      <i class="fas fa-dumbbell second-i"></i>
+                    </div>
+                  </div>
+                </div>
+                <p class="mt-2 mb-0 text-muted text-sm">
+                  <%= link_to courses_path, class: "text-success mr-2" do %>
+                    <i class="fa fa-arrow-up"></i> ajouter</span>
+                  <% end %>
+                  <span class="text-nowrap">un cours</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0" >
+                      Plannings
+                    </h5>
+                    <span class="number font-weight-bold mb-0">
+                      <%= @plannings %>
+                    </span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon-shape bg-orange">
+                      <i class="far fa-calendar-alt"></i>
+                    </div>
+                  </div>
+                </div>
+                <p class="mt-2 mb-0 text-muted text-sm">
+                  <%= link_to plannings_path, class: "text-success mr-2" do %>
+                    <i class="fa fa-arrow-up"></i> ajouter</span>
+                  <% end %>
+                  <span class="text-nowrap">un planning</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0" >
+                      Contact
+                    </h5>
+                    <span class="number font-weight-bold mb-0">
+                      2
+                    </span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon-shape bg-blue">
+                      <i class="far fa-calendar-alt"></i>
+                    </div>
+                  </div>
+                </div>
+                <p class="mt-2 mb-0 text-muted text-sm">
+                  <%= link_to edit_user_registration_path, class: "text-success mr-2" do %>
+                    <i class="fa fa-arrow-up"></i> Mettre à jour</span>
+                  <% end %>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
+    <!-- Courses table -->
+    <div class="container mt-n7">
+
+    </div>
+  </div>
 </div>
 
 <script>
