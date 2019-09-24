@@ -87,6 +87,60 @@
   }
 }
 
+.card-header-home {
+  h2 {
+    font-weight: 700;
+    color: #30233D;
+    font-size: 49px;
+  }
+  p {
+    max-width: 650px;
+    font-size: 21px;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+    color: #30233D;
+  }
+}
+
+.card-home {
+  h4 {
+    font-weight: 600;
+  }
+  p {
+    color: #776C82;
+    font-size: 14px;
+    padding: 0px 20px;
+  }
+}
+
+.bg-left-panel {
+  width: 70%;
+  color: white;
+  padding: 50px 150px;
+  a, p {
+    color: white;
+  }
+  h2 {
+    font-size: 45px;
+    font-weight: 700;
+    color: #8cc441;
+  }
+  span {
+    font-size: 32px;
+    font-weight: 600;
+  }
+}
+
+.bg-right-panel {
+  width: 30%;
+  height: 500px;
+  background-image: linear-gradient(rgba(7, 7, 7, 0.53), rgba(19, 19, 19, 0.1)), url("https://res.cloudinary.com/dcssvcmls/image/upload/v1569327423/fitandco/fitandcoreservation.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
 @media (min-width: 768px) {
   .pb-md-4, .py-md-4 {
     padding-bottom: 1.5rem !important;
@@ -101,4 +155,14 @@
 
 .pt-8, .py-8 {
   padding-top: 8rem;
+}
+
+@media (min-width: 100px) and (max-width: 900px) {
+  .bg-left-panel {
+    width: 100%;
+    padding: 50px 25px;
+  }
+  .display-none {
+    display: none !important;
+  }
 }

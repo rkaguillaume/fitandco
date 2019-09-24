@@ -4,4 +4,5 @@ class PictureUploader < CarrierWave::Uploader::Base
   process eager: true  # Force version generation at upload time.
 
   process convert: 'jpg'
+
 end

@@ -1,3 +1,72 @@
-<div class="container">
-  <h1>Fit and Co Welcome</h1>
+<% content_for :nav, render('shared/navbar_home') %>
+
+<div class="banner">
+  <div class="tagline-wrapper">
+    <span class="tagline-company">Fit & Co</span>
+    <h2>Votre salle de sport</h2>
+    <span class="tagline-city">Talmont Saint-Hilaire</span>
+    <div class="mt-5 pt-3 display-sm">
+      <%= link_to "Planning des cours", root_path, class: "btn btn-rounded btn-lg btn-success" %>
+    </div>
+  </div>
+</div>
+
+<div class="mt-5 mb-5 pt-3 pb-3">
+  <div class="container">
+    <div class="card-header-home">
+      <h2 class="pb-3">Salle de sport Fit & Co</h2>
+      <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</p>
+    </div>
+    <div class="mt-5 p-3">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="d-flex flex-column align-items-center card-home pb-5">
+            <div class="icon-rounded-blur"><i class="fas fa-dumbbell"></i></div>
+            <h4 class="mt-4 mb-3">Nos cours</h4>
+            <p class="text-center mb-4">Eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque. Eu feugiat pretium nibh ipsum consequat nisl vel pretium. </p>
+            <%= link_to "Découvrir", root_path, class: "btn btn-medium btn-rounded btn-success" %>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="d-flex flex-column align-items-center card-home pb-5">
+            <div class="icon-rounded-blur"><i class="fas fa-running second-ir"></i></div>
+            <h4 class="mt-4 mb-3">Nos coachs</h4>
+            <p class="text-center mb-4">Eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque. Eu feugiat pretium nibh ipsum consequat nisl vel pretium. </p>
+            <%= link_to "Découvrir", root_path, class: "btn btn-medium btn-rounded btn-success" %>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="d-flex flex-column align-items-center card-home pb-5">
+            <div class="icon-rounded-blur"><i class="fas fa-tags"></i></div>
+            <h4 class="mt-4 mb-3">Nos tarifs</h4>
+            <p class="text-center mb-4">Eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque. Eu feugiat pretium nibh ipsum consequat nisl vel pretium. </p>
+            <%= link_to "Découvrir", root_path, class: "btn btn-medium btn-rounded btn-success" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-dark-blue mb-5">
+  <div class="d-flex flex-row">
+     <div class="bg-left-panel mt-3">
+      <span>Fit & Co</span>
+      <h2>Réservez votre scéance d’éssai</h2>
+      <p class="mt-3">Découvrez notre salle de sport à Talmont Saint Hilaire. Nous vous offrons votre première scéance d’essai gratuite pour vous et une personne de votre choix</p>
+      <div class="text-center mt-5">
+        <%= link_to "Réservez", root_path, class: "btn btn-medium btn-rounded btn-success" %>
+      </div>
+    </div>
+    <div class="bg-right-panel display-none"></div>
+  </div>
+</div>
+
+<div class="pb-5 pt-3 mt-3">
+  <div class="container">
+    <div class="card-header-home">
+      <h2>Suivez-nous facebook </h2>
+      <span>Retrouvez toutes nos infos, MAJ et vidéos sur notre page fabook</span>
+    </div>
+  </div>
 </div>
