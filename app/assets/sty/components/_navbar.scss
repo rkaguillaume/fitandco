@@ -7,6 +7,38 @@
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-brand {
+  font-weight: 700;
+  font-size: 25px;
+  margin-left: 24px;
+}
+
+.navbar-f {
+  img {
+    width: 43px;
+    margin-left: 20px;
+  }
+  ul {
+    font-size: 14px;
+    color: #ffffffe3;
+    font-weight: 600;
+  }
+  li {
+    padding-left: 13px;
+  }
+  i {
+    padding-right: 8px;
+    font-size: 18px;
+    color: white;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 900px) {
+  .navbar-sm {
+    background: linear-gradient(87deg, #001922 0, #0e2a3a 100%);
+    border-bottom: 1px solid #939393a8;
+  }
+  .navbar-f ul {
+    margin-top: 15px;
+  }
 }
