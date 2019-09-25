@@ -33,6 +33,30 @@
   }
 }
 
+.navbar-fc {
+  img {
+    width: 43px;
+    margin-left: 20px;
+  }
+  ul {
+    font-size: 14px;
+    color: $dark;
+    font-weight: 600;
+  }
+  li {
+    padding-left: 13px;
+  }
+  i {
+    padding-right: 8px;
+    font-size: 18px;
+    color: $dark;
+  }
+  .navbar-brand {
+    color: $dark;
+  }
+}
+
+
 @media (min-width: 100px) and (max-width: 900px) {
   .navbar-sm {
     background: linear-gradient(87deg, #001922 0, #0e2a3a 100%);
@@ -40,5 +64,9 @@
   }
   .navbar-f ul {
     margin-top: 15px;
+  }
+  .navbar-fc-sm {
+    background: white;
+    border-bottom: 1px solid #939393a8;
   }
 }
