@@ -4,6 +4,7 @@ Rails.application.routes.draw do
         registrations: 'users/registrations'
       }
   root to: 'pages#home'
+  get 'cours', to: 'pages#courses'
 
   get 'dashboard', to: 'dashboards#index'
 
