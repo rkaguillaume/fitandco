@@ -1,32 +1,33 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-fc navbar-sm-fc">
+  <%= image_tag ("fitandcologo.png") %>
   <%= link_to "Fit & Co", root_path, class: "navbar-brand" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon"><i class="fas fa-stream"></i></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <%= link_to "Accueil", root_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">Planning</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <%= link_to "Nos cours", cours_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <% if user_signed_in? %>
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-        <% else %>
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        <% end %>
+        <%= link_to "Nos coachs", team_path, class: "nav-link" %>
       </li>
-      <% if user_signed_in? %>
       <li class="nav-item">
-        <a href="#" class="nav-link"><%= current_user.first_name %></a>
+        <a class="nav-link" href="#">Nos prix</a>
       </li>
-      <% end %>
-
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fas fa-mobile-alt"></i> <%= User.first.phone %></a>
+      </li>
     </ul>
   </div>
 </nav>
+

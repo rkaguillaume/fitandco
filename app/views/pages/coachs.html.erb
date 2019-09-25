@@ -1,0 +1,30 @@
+<div class="coach-header mt-5 mb-5 pt-5 pb-5">
+  <div class="container">
+    <div class="coachs-area d-flex flex-column align-items-center mt-5 mb-5">
+       <h2 class="pb-3">Nos coachs</h2>
+        <p class="text-center mt-3">Upper prior hundred links approach reedy, was to the than and the ever somehow surprised known for every by of there until road, </p>
+    </div>
+  </div>
+</div>
+
+<div class="bg-dark-blue mt-5 pb-5">
+  <div class="container">
+    <div class="row">
+      <% @coachs.each do |coach| %>
+        <div class="col-md-4 mt-n8 mb-5 pb-5">
+          <div class="card-coach d-flex flex-column align-items-center mb-5 pb-5">
+            <div class="coach-photo">
+              <%= image_tag coach.picture.url(:secure => true) %>
+            </div>
+            <div class="coach-name">
+              <span><%= coach.name %></span>
+            </div>
+            <div class="coach-specialisation">
+              <span><%= coach.specialisation %></span>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

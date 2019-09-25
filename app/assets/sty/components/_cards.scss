@@ -141,6 +141,7 @@
   background-position: bottom;
 }
 
+// COURSES CARD
 .courses-area {
   h2 {
     font-weight: 700;
@@ -176,8 +177,55 @@
   height: 450px;
 }
 
+//COACH CARDS
+.coach-header {
+  min-height: 500px;
+}
+
+.coachs-area {
+  h2 {
+    font-weight: 700;
+    border-bottom: 2px solid #8CC441;
+    display: inline;
+  }
+  p {
+    max-width: 700px;
+  }
+}
+
+.card-coach {
+  .coach-photo {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    img {
+      position: absolute;
+      top: 10px;
+      width: 230px;
+      height: 230px;
+      border-radius: 50%;
+    }
+  }
+  .coach-name {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+  }
+  .coach-specialisation {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 700;
+    color: $green;
+  }
+}
+
+.mt-n8 {
+  margin-top: -8rem;
+}
 
 
+// MEDIA QUERY
 @media (min-width: 768px) {
   .pb-md-4, .py-md-4 {
     padding-bottom: 1.5rem !important;

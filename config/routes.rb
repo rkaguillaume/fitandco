@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       }
   root to: 'pages#home'
   get 'cours', to: 'pages#courses'
+  get 'team', to: 'pages#coachs'
 
   get 'dashboard', to: 'dashboards#index'
 
