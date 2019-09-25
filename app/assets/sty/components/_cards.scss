@@ -124,7 +124,7 @@
   h2 {
     font-size: 45px;
     font-weight: 700;
-    color: #8cc441;
+    color: $green;
   }
   span {
     font-size: 32px;
@@ -141,9 +141,51 @@
   background-position: bottom;
 }
 
+.courses-area {
+  h2 {
+    font-weight: 700;
+    border-bottom: 2px solid #8CC441;
+    display: inline;
+  }
+  p {
+    max-width: 700px;
+  }
+}
+
+.card-course {
+  h4 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: $green;
+    text-transform: uppercase;
+  }
+  span {
+    font-weight: 500;
+    font-size: 25px;
+  }
+  p {
+    color: #776C82;
+    font-weight: 300;
+    font-size: 17px;
+    padding-top: 11px;
+  }
+}
+
+.photo-size {
+  height: 450px;
+}
+
+
+
 @media (min-width: 768px) {
   .pb-md-4, .py-md-4 {
     padding-bottom: 1.5rem !important;
+  }
+  .card-course {
+    padding-top: 100px;
+    padding-left: 150px;
+    padding-right: 100px;
   }
 }
 
@@ -164,5 +206,11 @@
   }
   .display-none {
     display: none !important;
+  }
+  .order-sm-devise {
+    order: 1;
+  }
+  .photo-size {
+    height: 250px;
   }
 }

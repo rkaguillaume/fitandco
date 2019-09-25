@@ -41,6 +41,42 @@
   color: $green;
 }
 
+.banner-courses {
+  width: 100%;
+  height: 600px;
+  padding: 50px;
+  margin-top: -4rem;
+  background: linear-gradient(87deg, #001922 0, #0e2a3a 100%);
+  color: white;
+  position: relative;
+}
+
+.tagline-courses {
+  padding: 0 15px;
+  text-align: left;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translateX(-50%);
+  width: 70%;
+  p {
+    color: white;
+    max-width: 500px;
+  }
+}
+
+.tagline-courses-content {
+  width: 100%;
+  h4 {
+    font-size: 75px;
+    font-weight: 700;
+  }
+  span {
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+}
+
 @media (min-width: 100px) and (max-width: 900px) {
   .tagline-wrapper {
     width: 90% !important;
@@ -56,6 +92,14 @@
   }
   .display-sm {
     text-align: center;
+  }
+  .tagline-courses {
+    top: 18%;
+  }
+  .tagline-courses-content {
+    h4 {
+      font-size: 45px;
+    }
   }
 
 }

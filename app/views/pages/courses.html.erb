@@ -1,0 +1,83 @@
+<% content_for :nav, render('shared/navbar_home') %>
+
+<div class="banner-courses">
+  <div class="d-flex flex-column align-items-center tagline-courses">
+    <p class="text-center mb-5">Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</p>
+    <div class="tagline-courses-content">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="text-center">
+            <h4 style="color: #fb6340;">28+</h4>
+            <span>Cours semaines</span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="text-center">
+            <h4 style="color: #5e72e4;"><%= @coachs %></h4>
+            <span>Coachs</span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="text-center">
+            <h4 style="color: #8CC441;">52</h4>
+            <span>Heures par semaine</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="courses-area d-flex flex-column align-items-center mt-5 mb-5">
+    <h2 class="mb-3 pb-2">Nos cours</h2>
+    <p class="text-center mt-2">Upper prior hundred links approach reedy, was to the than and the ever somehow surprised known for every by of there until road, </p>
+  </div>
+</div>
+
+<div class="mt-5 pt-5">
+  <% @courses.each do |course| %>
+    <div class="row mb-5 mt-5" >
+      <div class="col-md-6 order-sm-devise <%= cycle("order-1", "order-2") -%>">
+        <div class="container">
+          <div class="card-course">
+            <h4><%= course.title %></h4>
+            <span><%= course.subtitle %></span>
+            <p><%= course.description %></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 order-1">
+        <div id="slide<%= course.id %>" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <% course.photos.each do |photo| %>
+            <li data-target="#slide<%= course.id %>" data-slide-to="photo.id" class="<%= "active" if course.photos.first.id == photo.id  %>""></li>
+            <% end %>
+          </ol>
+          <div class="carousel-inner">
+
+            <% course.photos.each do |photo| %>
+            <div class="carousel-item <%= "active" if course.photos.first.id == photo.id  %>"">
+              <%= image_tag photo.image.url(:secure => true), class: "d-block w-100 photo-size"%>
+            </div>
+            <% end %>
+          </div>
+          <a class="carousel-control-prev" href="#slide<%= course.id %>" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#slide<%= course.id %>" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+
+
