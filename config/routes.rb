@@ -4,8 +4,9 @@ Rails.application.routes.draw do
         registrations: 'users/registrations'
       }
   root to: 'pages#home'
-  get 'cours', to: 'pages#courses'
-  get 'team', to: 'pages#coachs'
+  get 'les-cours', to: 'pages#courses'
+  get 'les-coachs', to: 'pages#coachs'
+  get 'planning-des-cours', to: 'pages#plannings'
 
   get 'dashboard', to: 'dashboards#index'
 
