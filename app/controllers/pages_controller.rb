@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :courses, :coachs]
+  skip_before_action :authenticate_user!, only: [:home, :courses, :coachs, :plannings]
 
   def home
   end
@@ -11,5 +11,9 @@ class PagesController < ApplicationController
 
   def coachs
     @coachs = Coach.all
+  end
+
+  def plannings
+    @plannings = Planning.all
   end
 end
