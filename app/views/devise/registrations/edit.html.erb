@@ -126,22 +126,11 @@
                               required: true,
                               autofocus: true,
                               input_html: { autocomplete: "Addresse", class: "form-control-alternative" }%>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <%= f.input :phone,
+                  <%= f.input :phone,
                               label: "Téléphone",
                               required: true,
                               autofocus: true,
                               input_html: { autocomplete: "Phone", class: "form-control-alternative" }%>
-                    </div>
-                    <div class="col-md-6">
-                      <%= f.input :email,
-                                  label: "E-mail de contact",
-                                  required: true,
-                                  autofocus: true,
-                                  input_html: { autocomplete: "email", class: "form-control-alternative" } %>
-                    </div>
-                  </div>
                 </div>
                 <hr>
                 <span class="label-info">Changer de mot de passe</span>

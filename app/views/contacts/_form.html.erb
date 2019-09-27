@@ -1,0 +1,42 @@
+
+<%= simple_form_for [@contact], url: user_contact_path do |f| %>
+  <span class="label-info">Moyen de contact</span>
+  <div class="pl-lg-4 mt-4 mb-4">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <%= f.input :email, placeholder: "email", input_html: { autocomplete: "email", class: "form-control-alternative" } %>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <%= f.input :emailbis, placeholder: "email secondaire", input_html: { autocomplete: "email secondaire", class: "form-control-alternative" } %>
+      </div>
+    </div>
+      <%= f.input :phone, placeholder: "téléphone", input_html: { autocomplete: "téléphone", class: "form-control-alternative" } %>
+      <%= f.input :address, placeholder: "Adresse", input_html: { autocomplete: "Adresse", class: "form-control-alternative" } %>
+  </div>
+
+  <span class="label-info">Réseaux sociaux</span>
+  <div class="pl-lg-4 mt-4 mb-4">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <%= f.input :facebook, placeholder: "ex: https://facebook.com", input_html: { autocomplete: "facebook", class: "form-control-alternative" } %>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <%= f.input :youtube, placeholder: "ex: https://youtube.com", input_html: { autocomplete: "youtube", class: "form-control-alternative" } %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <%= f.input :instagram, placeholder: "ex: https://intagram.com", input_html: { autocomplete: "email", class: "form-control-alternative" } %>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <%= f.input :twitter, placeholder: "ex: https://twitter.com", input_html: { autocomplete: "twitter", class: "form-control-alternative" } %>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <%= f.submit "Mettre à jour", class: "btn btn-success" %>
+  </div>
+<% end %>
+
+

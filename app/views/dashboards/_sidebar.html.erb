@@ -21,7 +21,7 @@
       </li>
       <li class="<%= active_link(coachs_path) %>">
         <%= link_to coachs_path do %>
-          <i class="fas fa-user-plus" style="color: #f5365c"></i> Mes coachs
+          <i class="fas fa-user-plus" style="color: #5e72e4"></i> Mes coachs
         <% end %>
       </li>
       <li class="<%= active_link(prices_path) %>">
@@ -29,9 +29,14 @@
           <i class="fas fa-tags" style="color: #8965e0"></i> Mes abonnements
         <% end %>
       </li>
+      <li class="<%= active_link(edit_user_contact_path) %>">
+        <%= link_to edit_user_contact_path do %>
+          <i class="fas fa-paper-plane"" style="color: #f5365c"></i> Mes contacts
+        <% end %>
+      </li>
       <li class="<%= active_link(edit_user_registration_path) %>">
         <%= link_to edit_user_registration_path do %>
-          <i class="fas fa-map-marker-alt" style="color: #10c5e5"></i> Contact
+          <i class="fas fa-map-marker-alt" style="color: #10c5e5"></i> Mon compte
         <% end %>
       </li>
   </ul>
