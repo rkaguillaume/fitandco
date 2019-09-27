@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'les-coachs', to: 'pages#coachs'
   get 'planning-des-cours', to: 'pages#plannings'
   get 'nos-abonnements', to: 'pages#subscriptions'
+  get 'contact', to: 'pages#contact_us'
 
   resource :user do
     resource :contact, only: [:create, :edit, :update]
