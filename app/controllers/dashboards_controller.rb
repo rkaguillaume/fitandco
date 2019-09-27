@@ -4,5 +4,6 @@ class DashboardsController < ApplicationController
     @coachs = Coach.all.size
     @courses = Course.all.size
     @plannings = Planning.all.size
+    @prices = Price.all.size
   end
 end

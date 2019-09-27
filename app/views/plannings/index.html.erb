@@ -34,8 +34,9 @@
       <div class="row">
         <div class="col">
           <div class="card shadow mb-4">
-            <div class="card-header border-0">
+            <div class="card-header border-0 d-flex flex-row justify-content-between">
               <div class="card-header-title">Tous mes plannings</div>
+              <%= link_to "Page des plannings", planning_des_cours_path, class: "btn btn-sm btn-success" %>
             </div>
             <div class="table-responsive">
               <table class="table aligns-items-center table-flush">

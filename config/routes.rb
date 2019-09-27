@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'dashboards#index'
 
   resources :plannings, only: [:index, :create, :edit, :update, :destroy]
+  resources :prices, only: [:index, :create, :edit, :update, :destroy]
   resources :coachs, only: [:index, :create, :edit, :update, :destroy]
   resources :courses, only: [:index, :create, :edit, :update, :destroy] do
     member do

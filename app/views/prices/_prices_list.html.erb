@@ -1,0 +1,18 @@
+<% @prices.each do |price| %>
+  <tr>
+    <th scope="row"><div class="align-items-center th-header"><%= price.price %></div></th>
+    <td><div class="th-text"><%= price.duration %></div></td>
+    <td><div class="th-text"><%= truncate(price.description, length: 35) %></div></td>
+    <td>
+      <div class="th-text text-center">
+        <%= link_to "Editer", edit_price_path(price), class: "btn btn-sm btn-primary" %>
+      </div>
+    </td>
+    <td class="text-center">
+      <div><%= link_to price_path(price), remote: true, method: :delete, data: {confirm: "Êtes-vous sûr ?"} do %>
+        <i class="far fa-trash-alt" aria-hidden="true"></i>
+    <% end %></div>
+    </td>
+  </tr>
+<% end %>
+
