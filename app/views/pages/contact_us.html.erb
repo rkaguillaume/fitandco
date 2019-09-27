@@ -1,0 +1,38 @@
+<div class="bg-dark-blue">
+  <div class="row">
+    <div class="col-md-6 contact-area-r">
+      <div class="container">
+         <div class="contact-area">
+            <h2>Contactez-nous</h2>
+            <div class="mt-5">
+              <div class="d-flex flex-row">
+                <i class="fas fa-map-marker-alt"></i>
+                <h4 class="pl-3">Notre salle</h4>
+              </div>
+              <p class="pl-3"><%= @address %></p>
+            </div>
+            <div class="mt-3 d-flex flex-row">
+              <i class="far fa-envelope"></i>
+              <h4 class="pl-2"><%= @main_email %></h4>
+            </div>
+            <div class="mt-3 d-flex flex-row">
+              <i class="fas fa-mobile-alt"></i>
+              <h4 class="pl-3"><%= @phone %></h4>
+            </div>
+            <div class="mt-5">
+              <h4>Nos réseaux sociaux</h4>
+              <div class="d-flex flex-colunm">
+                <%= link_to @facebook do %>
+                  <i class="fab fa-facebook" style="color: #fff;"></i> Notre page facebook
+                <% end %>
+              </div>
+            </div>
+         </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10995.177619340502!2d-1.5991287!3d46.4527706!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8bcdbe7de560f526!2sFit%20%26%20Co%20Talmont!5e0!3m2!1sen!2sfr!4v1569591068022!5m2!1sen!2sfr" width="100%" height="750" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+  </div>
+</div>
+
