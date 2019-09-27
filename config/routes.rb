@@ -3,11 +3,16 @@ Rails.application.routes.draw do
         sessions: 'users/sessions',
         registrations: 'users/registrations'
       }
+
   root to: 'pages#home'
   get 'les-cours', to: 'pages#courses'
   get 'les-coachs', to: 'pages#coachs'
   get 'planning-des-cours', to: 'pages#plannings'
   get 'nos-abonnements', to: 'pages#subscriptions'
+
+  resource :user do
+    resource :contact, only: [:create, :edit, :update]
+  end
 
   get 'dashboard', to: 'dashboards#index'
 

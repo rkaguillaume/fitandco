@@ -30,8 +30,8 @@
             Info légales
           </div>
           <ul>
-            <li>dcscsdsd</li>
-            <li>dezdzzd</li>
+            <li>Conditions générales d'utilisation</li>
+            <li>Mentions légales</li>
             <li><a href="mailto:contact@uppday.com">Contactez-nous</a></li>
           </ul>
         </div>
@@ -42,8 +42,8 @@
             Contact
           </div>
           <ul>
-            <li><i class="far fa-envelope"></i> <%= User.first.email %></li>
-            <li><i class="fas fa-mobile-alt"></i> <%= User.first.phone %></li>
+            <li><i class="far fa-envelope"></i> <%= User.first.contact.phone %></li>
+            <li><i class="fas fa-mobile-alt"></i> <%= User.first.contact.email %></li>
           </ul>
         </div>
       </div>

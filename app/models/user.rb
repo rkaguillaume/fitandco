@@ -8,4 +8,6 @@ class User < ApplicationRecord
   has_many :coachs
   has_many :plannings
   has_many :prices
+
+  has_one :contact, :dependent => :destroy
 end

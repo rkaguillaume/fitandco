@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_26_161021) do
+ActiveRecord::Schema.define(version: 2019_09_27_090158) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,21 @@ ActiveRecord::Schema.define(version: 2019_09_26_161021) do
     t.string "picture"
     t.bigint "user_id"
     t.index ["user_id"], name: "index_coachs_on_user_id"
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "email"
+    t.string "emailbis"
+    t.string "address"
+    t.string "phone"
+    t.string "facebook"
+    t.string "youtube"
+    t.string "instagram"
+    t.string "twitter"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_contacts_on_user_id"
   end
 
   create_table "courses", force: :cascade do |t|
@@ -88,6 +103,7 @@ ActiveRecord::Schema.define(version: 2019_09_26_161021) do
 
   add_foreign_key "coaches", "users"
   add_foreign_key "coachs", "users"
+  add_foreign_key "contacts", "users"
   add_foreign_key "courses", "users"
   add_foreign_key "photos", "courses"
   add_foreign_key "plannings", "users"
