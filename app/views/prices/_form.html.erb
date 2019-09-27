@@ -1,0 +1,37 @@
+<div class="modal fade" id="formPrice" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content modal-form bg-secondary">
+      <div class="modal-header modal-form-header bg-white">
+        <h5 class="modal-title modal-header-title" id="exampleModalCenterTitle">Ajouter un Tarif</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <%= simple_form_for [@price], url: prices_path  do |f| %>
+      <span class="label-info">Informations sur le coach</span>
+      <div class="pl-lg-4 mt-4 mb-4">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <%= f.input :price, placeholder: "Tarif", input_html: { autocomplete: "Tarif", class: "form-control-alternative" } %>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <%= f.input :duration, placeholder: "Durée", input_html: { autocomplete: "Durée", class: "form-control-alternative" } %>
+          </div>
+        </div>
+      </div>
+      <span class="label-info">Décrivez votre tarif</span>
+          <div class="pl-lg-4 mt-4 mb-4">
+            <%= f.text_area :description, placeholder: "description", class: "form-control-text" %>
+          </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
+        <%= f.submit "Ajouter le nouveau tarif", class: "btn btn-success" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
