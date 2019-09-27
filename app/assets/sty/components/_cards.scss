@@ -236,6 +236,39 @@
   }
 }
 
+// CARD PRICE/SUBSCRIPTION
+.card-subscription {
+  padding: 30px;
+  min-height: 450px;
+  max-height: 450px;
+  position: relative;
+  .price {
+    .intp {
+      font-size: 55px;
+      font-weight: 700;
+    }
+    .lgp {
+      font-weight: 600;
+      font-size: 28px;
+    }
+  }
+  .price-duration {
+    font-size: 20px;
+    font-weight: 600;
+    color: $green;
+  }
+  .price-description {
+    p {
+      color: #3b4055;
+      font-size: 16px;
+    }
+  }
+  .position-button {
+    position: absolute;
+    bottom: 40px;
+  }
+}
+
 
 // MEDIA QUERY
 @media (min-width: 768px) {

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'les-cours', to: 'pages#courses'
   get 'les-coachs', to: 'pages#coachs'
   get 'planning-des-cours', to: 'pages#plannings'
+  get 'nos-abonnements', to: 'pages#subscriptions'
 
   get 'dashboard', to: 'dashboards#index'
 

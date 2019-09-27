@@ -16,4 +16,8 @@ class PagesController < ApplicationController
   def plannings
     @plannings = Planning.all
   end
+
+  def subscriptions
+    @prices = Price.all
+  end
 end
