@@ -1,7 +1,9 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :courses, :coachs, :plannings, :contact_us]
+  skip_before_action :authenticate_user!, only: [:home, :courses, :coachs, :plannings, :subscriptions, :contact_us]
 
   def home
+    @courses = Course.all
+    @photos = Photo.all
   end
 
   def courses
