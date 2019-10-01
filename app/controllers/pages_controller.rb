@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   def home
     @courses = Course.all
     @photos = Photo.all
+    @pictures = Landingpicture.all
   end
 
   def courses
