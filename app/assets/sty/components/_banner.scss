@@ -2,12 +2,7 @@
   position: relative;
   margin-top: -4rem;
   width: 100%;
-  height: 600px;
-  padding: 50px;
-  background-image: linear-gradient(rgba(7, 7, 7, 0.53), rgba(19, 19, 19, 0.1)), url("https://res.cloudinary.com/dcssvcmls/image/upload/v1569315256/fitandco/fitandcover.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
+  height: 750px;
   color: white;
   .tagline-wrapper {
     padding: 0 15px;
@@ -26,6 +21,17 @@
       font-weight: 700;
       font-size: 48px;
     }
+  }
+  .carousel-item {
+    height: 750px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -4rem;
+    width: 100%;
+    background-position: center;
+  }
+  .carousel-control-prev, .carousel-control-next {
+    margin-top: 4rem;
   }
 }
 
