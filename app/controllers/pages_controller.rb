@@ -5,6 +5,7 @@ class PagesController < ApplicationController
     @courses = Course.all
     @photos = Photo.all
     @pictures = Landingpicture.all
+    @message = Message.new
   end
 
   def courses

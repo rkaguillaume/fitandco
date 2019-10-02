@@ -11,9 +11,9 @@ class MessagesController < ApplicationController
     if @message.valid?
       email = MessageMailer.contact_me(@message)
       email.deliver_now
-      redirect_to new_message_url, notice: "Message received, thanks!"
+      redirect_to root_path, notice: "Message envoyé, merci"
     else
-      render :new
+      redirect_to root_path, alert: "Veuillez remplir tout les champs demandés"
     end
   end
 
