@@ -15,12 +15,13 @@
             Menu
           </div>
           <ul>
-            <li>Accueil</li>
-            <li>Planning</li>
-            <li>Nos cours</li>
-            <li>Nos coachs</li>
-            <li>Abonnements</li>
-            <li>Contact</li>
+            <li><%= link_to "Accueil", root_path %></li>
+            <li><%= link_to "Planning", planning_des_cours_path %></li>
+            <li><%= link_to "Nos cours", les_cours_path %></li>
+            <li><%= link_to "Nos coachs", les_coachs_path %></li>
+            <li><%= link_to "Abonnements", nos_abonnements_path %></li>
+            <li><%= link_to "Contact", contact_path %></li>
+
           </ul>
         </div>
       </div>
@@ -30,9 +31,8 @@
             Info légales
           </div>
           <ul>
-            <li>Conditions générales d'utilisation</li>
-            <li>Mentions légales</li>
-            <li><a href="mailto:contact@uppday.com">Contactez-nous</a></li>
+            <li><%= link_to "Conditions générales d'utilisation", conditions_generales_utilisation_path %></li>
+            <li><%= link_to "Mentions légales", mentions_legales_path %></li>
           </ul>
         </div>
       </div>

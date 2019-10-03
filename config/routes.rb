@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get 'planning-des-cours', to: 'pages#plannings'
   get 'nos-abonnements', to: 'pages#subscriptions'
   get 'contact', to: 'pages#contact_us'
+  get "conditions-generales-utilisation", to: "pages#general_condition_sale"
+  get "mentions-legales", to: "pages#legal_notices"
 
   post 'contact-me', to: 'messages#create', as: 'create_message'
 

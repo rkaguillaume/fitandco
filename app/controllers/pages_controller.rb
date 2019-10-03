@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :courses, :coachs, :plannings, :subscriptions, :contact_us]
+  skip_before_action :authenticate_user!, only: [:home, :courses, :coachs, :plannings, :subscriptions, :contact_us, :legal_notices, :general_condition_sale]
 
   def home
     @courses = Course.all
@@ -35,5 +35,11 @@ class PagesController < ApplicationController
     @instagram = User.first.contact.instagram
     @youtube = User.first.contact.youtube
     @twitter = User.first.contact.twitter
+  end
+
+  def general_condition_sale
+  end
+
+  def legal_notices
   end
 end
