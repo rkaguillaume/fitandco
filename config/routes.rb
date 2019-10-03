@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get 'nos-abonnements', to: 'pages#subscriptions'
   get 'contact', to: 'pages#contact_us'
 
+  post 'contact-me', to: 'messages#create', as: 'create_message'
+
   resource :user do
     resource :contact, only: [:create, :edit, :update]
   end

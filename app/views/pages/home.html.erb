@@ -58,7 +58,7 @@
       <h2>Réservez votre scéance d’éssai</h2>
       <p class="mt-3">Découvrez notre salle de sport à Talmont Saint Hilaire. Nous vous offrons votre première scéance d’essai gratuite pour vous et une personne de votre choix</p>
       <div class="text-center mt-5">
-        <%= link_to "Réservez", root_path, class: "btn btn-medium btn-rounded btn-success" %>
+        <button type="button" class="btn btn-medium btn-rounded btn-success" data-toggle="modal" data-target="#exampleModalCenter"> Réservez </button>
       </div>
     </div>
     <div class="bg-right-panel display-none"></div>
@@ -91,6 +91,9 @@
   </div>
 </div>
 
+<!-- Modal New Message Form-->
+<%= render partial: 'messages/new' %>
+
 <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>
@@ -117,3 +120,4 @@ theme_color="#78aa34"
 logged_in_greeting="Bonjour, comment puis-je vous aider ?"
 logged_out_greeting="Bonjour, comment puis-je vous aider ?">
 </div>
+
