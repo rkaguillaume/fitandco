@@ -12,6 +12,6 @@ class MessageMailer < ApplicationMailer
     @phone = message.phone
     @question = message.question
 
-    mail to: "guillaumeroche24@gmail.com", from: message.email, subject: "Nouvelle demande de scéance d'éssai"
+    mail to: "cyril.guermont@hotmail.fr", from: message.email, subject: "Nouvelle demande de scéance d'éssai"
   end
 end
