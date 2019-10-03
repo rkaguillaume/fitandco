@@ -68,8 +68,24 @@
 <div class="pb-5 pt-3 mt-3">
   <div class="container">
     <div class="card-header-home">
-      <h2>Suivez-nous facebook </h2>
-      <span>Retrouvez toutes nos infos, MAJ et vidéos sur notre page fabook</span>
+      <div class="row">
+        <div class="col-md-8 mb-5">
+          <h2>Suivez-nous facebook </h2>
+          <div class="pr-5 pt-5">
+            <span style="font-size: 17px; line-height: 33px;">Pour suivrez toutes nos dernières actualités, retrouvez nous sur notre page facebook. Vous aurez accès à toutes nos infos, mise à jours et vidéos !</span>
+          </div>
+          <div class="mt-5 pt-2">
+            <a href="https://www.facebook.com/Talmont.St.Hilaire/" class="btn btn-medium btn-rounded btn-success"><i class="far fa-thumbs-up"></i> Nous suivre</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div>
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v4.0&appId=204218456795435&autoLogAppEvents=1"></script>
+            <div class="fb-page" data-href="https://www.facebook.com/Talmont.St.Hilaire/" data-tabs="timeline" data-width="" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Talmont.St.Hilaire/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Talmont.St.Hilaire/">Fit &amp; Co</a></blockquote></div>
+          </div>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -77,4 +93,31 @@
 
 <!-- Modal New Message Form-->
 <%= render partial: 'messages/new' %>
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v4.0'
+    });
+  };
+
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="1752555615038825"
+theme_color="#78aa34"
+logged_in_greeting="Bonjour, comment puis-je vous aider ?"
+logged_out_greeting="Bonjour, comment puis-je vous aider ?">
+</div>
 
