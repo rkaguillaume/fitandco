@@ -8,10 +8,10 @@ Rails.application.routes.draw do
     }
 
   root to: 'pages#home'
-  get 'les-cours', to: 'pages#courses'
-  get 'les-coachs', to: 'pages#coachs'
-  get 'planning-des-cours', to: 'pages#plannings'
-  get 'nos-abonnements', to: 'pages#subscriptions'
+  get 'cours-fitandco', to: 'pages#courses'
+  get 'coachs-fitandco', to: 'pages#coachs'
+  get 'planning-cours-fitandco', to: 'pages#plannings'
+  get 'abonnements-fitandco', to: 'pages#subscriptions'
   get 'contact', to: 'pages#contact_us'
   get "conditions-generales-utilisation", to: "pages#general_condition_sale"
   get "mentions-legales", to: "pages#legal_notices"
