@@ -41,6 +41,7 @@ abbr[title="required"] {
   border: 1px dashed rgba(98, 98, 98, 0.4);
   border-radius: 3px;
   transition: 0.2s;
+  position: relative;
   &.is-active {
     background-color: rgba(255, 255, 255, 0.05);
   }
