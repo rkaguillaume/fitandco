@@ -1,1 +1,24 @@
 // Specific CSS for your home-page
+.review {
+  .pic {
+    text-align: center;
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+  }
+  .name {
+    font-weight: 700;
+  }
+  .comment {
+    span {
+      font-weight: 300;
+      font-size: 10px;
+    }
+  }
+  .star {
+    justify-content: center;
+    color: #ffbe00;
+  }
+}

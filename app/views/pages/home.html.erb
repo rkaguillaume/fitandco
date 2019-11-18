@@ -24,26 +24,26 @@
       <div class="row">
         <div class="col-md-4">
           <div class="d-flex flex-column align-items-center card-home pb-5">
-            <div class="icon-rounded-blur"><i class="fas fa-dumbbell"></i></div>
+            <div class="icon-rounded-blur"><%= image_tag("picto-courses.svg", size: "100x100") %></div>
             <h4 class="mt-4 mb-3">Nos cours</h4>
             <p class="text-center mb-4">Eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque. Eu feugiat pretium nibh ipsum consequat nisl vel pretium. </p>
-            <%= link_to "Découvrir", cours_fitandco_path, class: "btn btn-medium btn-rounded btn-success" %>
+            <%= link_to "Découvrir", cours_fitandco_path, class: "btn btn-medium btn-rounded btn-dark" %>
           </div>
         </div>
         <div class="col-md-4">
           <div class="d-flex flex-column align-items-center card-home pb-5">
-            <div class="icon-rounded-blur"><i class="fas fa-running second-ir"></i></div>
+            <div class="icon-rounded-blur"><%= image_tag("coach-picto.svg", size: "100x100") %></div>
             <h4 class="mt-4 mb-3">Nos coachs</h4>
             <p class="text-center mb-4">Eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque. Eu feugiat pretium nibh ipsum consequat nisl vel pretium. </p>
-            <%= link_to "Découvrir", coachs_fitandco_path, class: "btn btn-medium btn-rounded btn-success" %>
+            <%= link_to "Découvrir", coachs_fitandco_path, class: "btn btn-medium btn-rounded btn-dark" %>
           </div>
         </div>
         <div class="col-md-4">
           <div class="d-flex flex-column align-items-center card-home pb-5">
-            <div class="icon-rounded-blur"><i class="fas fa-tags"></i></div>
+            <div class="icon-rounded-blur"><%= image_tag("picto-sub.svg", size: "100x100") %></div>
             <h4 class="mt-4 mb-3">Nos abonnements</h4>
             <p class="text-center mb-4">Eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque. Eu feugiat pretium nibh ipsum consequat nisl vel pretium. </p>
-            <%= link_to "Découvrir", abonnements_fitandco_path, class: "btn btn-medium btn-rounded btn-success" %>
+            <%= link_to "Découvrir", abonnements_fitandco_path, class: "btn btn-medium btn-rounded btn-dark" %>
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@
       <h2>Réservez votre scéance d’éssai</h2>
       <p class="mt-3">Découvrez notre salle de sport à Talmont Saint Hilaire. Nous vous offrons votre première scéance d’essai gratuite pour vous et une personne de votre choix</p>
       <div class="text-center mt-5">
-        <button type="button" class="btn btn-medium btn-rounded btn-success" data-toggle="modal" data-target="#exampleModalCenter"> Réservez </button>
+        <button type="button" class="btn btn-lg btn-rounded btn-success" data-toggle="modal" data-target="#exampleModalCenter"> Réservez </button>
       </div>
     </div>
     <div class="bg-right-panel display-none"></div>
@@ -74,8 +74,71 @@
           <div class="pr-5 pt-5">
             <span style="font-size: 17px; line-height: 33px;">Pour suivrez toutes nos dernières actualités, retrouvez nous sur notre page facebook. Vous aurez accès à toutes nos infos, mise à jours et vidéos !</span>
           </div>
-          <div class="mt-5 pt-2">
-            <a href="https://www.facebook.com/Talmont.St.Hilaire/" class="btn btn-medium btn-rounded btn-success"><i class="far fa-thumbs-up"></i> Nous suivre</a>
+          <div class="row mt-5 mb-3">
+            <div class="col-md-4">
+              <div class="review">
+                <div class="pic">
+                  <img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/65705542_2352651814781238_5904107012836294656_o.jpg?_nc_cat=108&_nc_oc=AQlvZNTzPa4efdRegsSzgrT3vAMQNZB0aRBcFcX7Mzm_CBxwNa9ZUj80rGIJHX09v1k&_nc_ht=scontent-cdt1-1.xx&oh=f2bf4fa9d3912567c3abaf0fe0df6749&oe=5E4DAC80" alt="">
+                </div>
+                <div class="name text-center mt-2 mb-2">
+                  Pascal Cat
+                </div>
+                <div class="comment text-center">
+                  <span>Le sérieux,le suivi,très bon conseil,qualités des cours tout cela avec des coatchs au top ,dans une ambiance sympathique. Je recommande roso</span>
+                </div>
+                <div class="star d-flex flex-row mt-3">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star ml-2"></i>
+                  <i class="fas fa-star ml-2"></i>
+                  <i class="fas fa-star ml-2"></i>
+                  <i class="fas fa-star ml-2"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="review">
+                <div class="pic">
+                  <img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/65705542_2352651814781238_5904107012836294656_o.jpg?_nc_cat=108&_nc_oc=AQlvZNTzPa4efdRegsSzgrT3vAMQNZB0aRBcFcX7Mzm_CBxwNa9ZUj80rGIJHX09v1k&_nc_ht=scontent-cdt1-1.xx&oh=f2bf4fa9d3912567c3abaf0fe0df6749&oe=5E4DAC80" alt="">
+                </div>
+                <div class="name text-center mt-2 mb-2">
+                  Pascal Cat
+                </div>
+                <div class="comment text-center">
+                  <span>Le sérieux,le suivi,très bon conseil,qualités des cours tout cela avec des coatchs au top ,dans une ambiance sympathique. Je recommande roso</span>
+                </div>
+                <div class="star d-flex flex-row mt-3">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star ml-2"></i>
+                  <i class="fas fa-star ml-2"></i>
+                  <i class="fas fa-star ml-2"></i>
+                  <i class="fas fa-star ml-2"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="review">
+                <div class="pic">
+                  <img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/65705542_2352651814781238_5904107012836294656_o.jpg?_nc_cat=108&_nc_oc=AQlvZNTzPa4efdRegsSzgrT3vAMQNZB0aRBcFcX7Mzm_CBxwNa9ZUj80rGIJHX09v1k&_nc_ht=scontent-cdt1-1.xx&oh=f2bf4fa9d3912567c3abaf0fe0df6749&oe=5E4DAC80" alt="">
+                </div>
+                <div class="name text-center mt-2 mb-2">
+                  Pascal Cat
+                </div>
+                <div class="comment text-center">
+                  <span>Le sérieux,le suivi,très bon conseil,qualités des cours tout cela avec des coatchs au top ,dans une ambiance sympathique. Je recommande roso</span>
+                </div>
+                <div class="star d-flex flex-row mt-3">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star ml-2"></i>
+                  <i class="fas fa-star ml-2"></i>
+                  <i class="fas fa-star ml-2"></i>
+                  <i class="fas fa-star ml-2"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-row mt-5 pt-2 justify-content-center">
+            <a href="https://www.facebook.com/Talmont.St.Hilaire/" class="btn btn-medium btn-rounded btn-dark">Avis Facebook</a>
+            <a href="https://www.google.com/search?q=fit+and+co+talmont&rlz=1C5CHFA_enFR568FR568&oq=fit+and+co+talmont&aqs=chrome..69i57j0l2j69i60l3.3256j0j7&sourceid=chrome&ie=UTF-8" class="btn btn-medium btn-rounded btn-dark ml-5">Avis Google</a>
           </div>
         </div>
         <div class="col-md-4">

@@ -24,8 +24,9 @@
       <div class="pl-lg-4 mt-4 mb-4">
         <div class="file-drop-area">
           <span class="fake-btn">Select. fichier</span>
-          <span class="file-msg">ou glisser et déposer vos photos</span>
-          <%= f.input :picture, type: :file, multiple: true, wrapper: false, input_html: { class: "file-input" }, label: false %>
+          <span class="file-msg">ou glisser et déposer vos photos</span>x
+          <%= cl_image_upload_tag(:picture, type: :file, :html => { :multiple => true, class: "file-input" }, :use_filename => true, :folder => "feufeu") %>
+
         </div>
       </div>
       </div>
