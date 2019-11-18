@@ -21,16 +21,43 @@
           <div class="col-lg-7 col-md-10">
             <h1 class="title-header text-white">Ajouter vos plannings</h1>
             <p class="text-white mt-0 mb-5">Bienvenue sur votre page d'ajout de planning. Vous pouvez ajouter ou éditer les plannings horaires de l'établissement (Format IMG/PNG)</p>
-            <button type="button" class="btn btn-info btn-header" data-toggle="modal" data-target="#formPlanning">
-              Ajouter un planning
-            </button>
+          </div>
+        </div>
+      </div>
+
+
+       <div class="container pb-5">
+        <div class="card bg-secondary">
+          <div class="card-header bg-white border-0">
+            <div class="card-header-title">
+              <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i> Selectionner des photos
+            </div>
+          </div>
+          <div class="card-body">
+            <%= simple_form_for [@planning], url: plannings_path do |f| %>
+            <span class="label-info">Nom de votre planning</span>
+            <div class="pl-lg-4 mt-4 mb-4">
+              <%= f.input :title, placeholder: "Titre du planning", input_html: { autocomplete: "Nom du coach", class: "form-control-alternative" } %>
+            </div>
+
+            <span class="label-info">Ajouter votre planning</span>
+            <div class="pl-lg-4 mt-4 mb-4">
+              <div class="file-drop-area">
+                <span class="fake-btn">Select. fichier</span>
+                <span class="file-msg">ou glisser et déposer votre planning</span>
+                <%= f.input :plan_img, type: :file, wrapper: false, input_html: { class: "file-input" }, label: false %>
+              </div>
+            </div>
+
+              <%= f.submit "Ajouter le planning", class: "btn btn-success" %>
+            <% end %>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Courses table -->
-    <div class="container mt-n7">
+    <div class="container mt-5">
       <div class="row">
         <div class="col">
           <div class="card shadow mb-4">

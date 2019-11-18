@@ -21,9 +21,41 @@
           <div class="col-lg-7 col-md-10">
             <h1 class="title-header text-white">Ajouter des coachs</h1>
             <p class="text-white mt-0 mb-5">Bienvenue sur votre page d'ajout de coachs. Vous pouvez ajouter ou éditer des informations de tous vos coachs ici</p>
-            <button type="button" class="btn btn-info btn-header" data-toggle="modal" data-target="#formCoach">
-              Ajouter un coach
-            </button>
+          </div>
+        </div>
+      </div>
+
+
+            <div class="container pb-5">
+        <div class="card bg-secondary">
+          <div class="card-header bg-white border-0">
+            <div class="card-header-title">
+              <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i> Ajouter un coach
+            </div>
+          </div>
+          <div class="card-body">
+
+          <%= simple_form_for [@coach], url: coachs_path, html: {multipart: true}  do |f| %>
+            <span class="label-info">Informations sur le coach</span>
+
+                  <%= f.input :name, placeholder: "Nom du coach", input_html: { autocomplete: "Nom du coach", class: "form-control-alternative" } %>
+
+                  <%= f.input :specialisation, placeholder: "Spécialisation", input_html: { autocomplete: "Spécialisation", class: "form-control-alternative" } %>
+
+            <span class="label-info">Ajouter une photo</span>
+            <div class="pl-lg-4 mt-4 mb-4">
+              <div class="file-drop-area">
+                <span class="fake-btn">Select. fichier</span>
+                <span class="file-msg">ou glisser et déposer vos photos</span>x
+                <%= cl_image_upload_tag(:picture, type: :file, :html => { :multiple => true, class: "file-input" }, :use_filename => true, :folder => "feufeu") %>
+
+              </div>
+            </div>
+
+
+              <%= f.submit "Ajouter le coach", class: "btn btn-success" %>
+            <% end %>
+
           </div>
         </div>
       </div>
