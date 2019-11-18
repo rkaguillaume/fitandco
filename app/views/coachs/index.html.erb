@@ -46,8 +46,8 @@
             <div class="pl-lg-4 mt-4 mb-4">
               <div class="file-drop-area">
                 <span class="fake-btn">Select. fichier</span>
-                <span class="file-msg">ou glisser et déposer vos photos</span>x
-                <%= cl_image_upload_tag(:picture, type: :file, :html => { :multiple => true, class: "file-input" }, :use_filename => true, :folder => "feufeu") %>
+                <span class="file-msg">ou glisser et déposer vos photos</span>
+                <%= f.input :picture, type: :file, wrapper: false, input_html: { class: "file-input" }, label: false %>
 
               </div>
             </div>
@@ -105,4 +105,34 @@
     });
 
 });
+</script>
+
+<script>
+  var $fileInput = $('.file-input');
+  var $droparea = $('.file-drop-area');
+
+  // highlight drag area
+  $fileInput.on('dragenter focus click', function() {
+    $droparea.addClass('is-active');
+  });
+
+  // back to normal state
+  $fileInput.on('dragleave blur drop', function() {
+    $droparea.removeClass('is-active');
+  });
+
+  // change inner text
+  $fileInput.on('change', function() {
+    var filesCount = $(this)[0].files.length;
+    var $textContainer = $(this).prev();
+
+    if (filesCount === 1) {
+      // if single file is selected, show file name
+      var fileName = $(this).val().split('\\').pop();
+      $textContainer.text(fileName);
+    } else {
+      // otherwise show number of files
+      $textContainer.text(filesCount + ' fichiers sélectionnées');
+    }
+  });
 </script>
