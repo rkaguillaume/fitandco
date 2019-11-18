@@ -19,11 +19,11 @@
 }
 
 .btn-medium {
-  padding: 7px 40px;
+  padding: 10px 40px;
 }
 
 .btn-lg {
-  padding: 10px 45px;
+  padding: 17px 50px;
 }
 
 
@@ -42,7 +42,24 @@
 }
 
 .btn-success {
+  background: linear-gradient(87deg, #3aff00 0, #b4ff00 100%);
+  border-color: #3aff00;
+  color: #222833;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.btn-success-lt {
+  background: linear-gradient(87deg, #00ff2b 0, #17fd73 100%);
   color: #fff;
+  box-shadow: 0 0px 0px rgba(50,50,93,0.11), 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.btn-dark {
+  background: #000;
+  color: #00ff2b;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .btn-header {

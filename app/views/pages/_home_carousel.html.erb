@@ -1,7 +1,7 @@
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <% @pictures.each do |picture| %>
-      <div class="carousel-item <%= "active" if picture == @pictures.first  %>" style="background-image: linear-gradient(to bottom, rgba(255,0,0,0), #181C1F), url(<%= picture.image %>)">
+      <div class="carousel-item <%= "active" if picture == @pictures.first  %>" style="background-image: linear-gradient(to top, #0000, #181c1f6e), url(<%= picture.image %>)">
         <img src="" class="d-block w-100" alt="...">
       </div>
     <% end %>
