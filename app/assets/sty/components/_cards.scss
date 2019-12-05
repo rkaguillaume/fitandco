@@ -145,7 +145,7 @@
 .courses-area {
   h2 {
     font-weight: 700;
-    border-bottom: 2px solid #8CC441;
+    border-bottom: 2px solid #65ff37;
     display: inline;
   }
   p {
@@ -160,6 +160,10 @@
     letter-spacing: 3px;
     color: $green;
     text-transform: uppercase;
+    background: #000;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: fit-content;
   }
   span {
     font-weight: 500;
@@ -185,7 +189,7 @@
 .coachs-area {
   h2 {
     font-weight: 700;
-    border-bottom: 2px solid #8CC441;
+    border-bottom: 2px solid #65ff37;
     display: inline;
   }
   p {
