@@ -1,9 +1,13 @@
+<% content_for :nav, render('shared/navbar_home') %>
 <% content_for :meta_title, "Nos abonnements | #{DEFAULT_META["meta_product_name"]}" %>
 <% content_for :meta_description, "Découvrez les différents abonnements Fit and Co" %>
 
+
+<div class="bg-subcription">
+
 <div class="coach-header mt-5 mb-5 pt-5 pb-5">
   <div class="container">
-    <div class="coachs-area d-flex flex-column align-items-center mt-5 mb-5">
+    <div class="subcriptions-area d-flex flex-column align-items-center mt-5 mb-5">
        <h2 class="pb-3">Nos abonnements</h2>
         <p class="text-center mt-3">Upper prior hundred links approach reedy, was to the than and the ever somehow surprised known for every by of there until road, </p>
     </div>
@@ -13,7 +17,7 @@
 <div class="container">
   <div class="row">
     <% @prices.each do |price| %>
-      <div class="col-md-4 mt-n8 mb-5">
+      <div class="col-md-4">
         <div class="card card-subscription d-flex flex-column align-items-center mb-5">
           <div class="price mt-3">
             <span class="intp"><%= price.price %></span>
@@ -34,4 +38,6 @@
       </div>
     <% end %>
   </div>
+</div>
+
 </div>

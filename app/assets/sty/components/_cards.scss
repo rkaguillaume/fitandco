@@ -303,6 +303,20 @@
  }
 }
 
+// SUBSCRIPTION AREA
+.subcriptions-area {
+  padding-top: 85px;
+  h2 {
+    font-weight: 700;
+    border-bottom: 2px solid #65ff37;
+    display: inline;
+    color: white;
+  }
+  p {
+    max-width: 700px;
+    color: white;
+  }
+}
 
 // MEDIA QUERY
 @media (min-width: 768px) {
